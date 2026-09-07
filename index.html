@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eniii... c:</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Music Loop -->
+  <audio id="bg-music" src="music.mp3" preload="auto" loop playsinline></audio>
+
+  <div class="window-container">
+    <div class="window-header">
+      <span class="window-title" id="window-title">★ Hello luvv c: ★</span>
+      <div class="window-buttons" aria-hidden="true">
+        <span>_</span>
+        <span>□</span>
+        <span class="btn-close">✕</span>
+      </div>
+    </div>
+
+    <div class="window-content">
+      <!-- Step 1: Role Selection -->
+      <section id="selection-screen">
+        <p class="question-text">Which one do you prefer to be called?</p>
+        <div class="options-container">
+          <button type="button" class="retro-btn" onclick="selectRole('Boyfriend')">Boyfriend</button>
+          <button type="button" class="retro-btn" onclick="selectRole('Girlfriend')">Girlfriend</button>
+          <button type="button" class="retro-btn" onclick="selectRole('Partner')">Partner</button>
+        </div>
+        <div class="human-container">
+          <button type="button" class="tiny-btn human-btn" onclick="selectRole('Human')">Human..?</button>
+        </div>
+      </section>
+
+      <!-- Step 2: Letter Alert -->
+      <section id="open-screen" class="hidden">
+        <p class="blink">★ You have (1) new unread letter! ★</p>
+        <button type="button" class="retro-btn big-btn" onclick="revealLetter()">Click here to open</button>
+      </section>
+
+      <!-- Step 3: Reveal Message -->
+      <section id="letter-screen" class="hidden">
+        <div class="letter-box">
+          <p>God, how do I start? I wanna tell you I love you so much... But I dont want you to feel its just a repeat, I really do mean it each time I say it... :c</p>
+          <p>I'm really really shy and nervous to ask you, even if I'm just writting it for you to see later...</p> 
+          <p>Each time I talk to you, each time we play a game together, each time I do ANYTHING with you... it feels special, magical, unique; it makes my heartbeat faster. YOU make my heartbeat faster, each time u call me dear, each time u call me adorable...</p>
+          <p>Thats why I want you to be mine, like how you want me to be yours... Eni... Crowy...</p>
+          <p>Thats why I want to ask you.</p>
+          <p class="final-question">Do you wanna be my <span id="chosen-role"></span>?</p>
+        </div>
+
+        <div class="reply-container">
+          <button type="button" class="retro-btn answer-btn" onclick="celebrateYes()">YES! &lt;3</button>
+          <button type="button" class="retro-btn answer-btn" onclick="celebrateYes()">OF COURSE! :3</button>
+        </div>
+
+        <div class="decline-container">
+          <button type="button" class="tiny-btn" onclick="alert('Ow, it\'s okay...')">No, sorry.</button>
+        </div>
+      </section>
+
+      <!-- Step 4: Celebration Screen -->
+      <section id="celebration-screen" class="hidden">
+        <h2 class="rainbow-text">YAYYYYYYYYYY!</h2>
+        <div class="image-wrapper">
+          <img src="us.jpg" alt="Us" class="celebration-img">
+          <p class="caption-text">This us btw :)</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
